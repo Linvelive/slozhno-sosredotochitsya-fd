@@ -1,1 +1,1 @@
-https://github.com/Linvelive/slozhno-sosredotochitsya-fd.git
+https://github.com/Linvelive/slozhno-sosredotochitsya-fd
