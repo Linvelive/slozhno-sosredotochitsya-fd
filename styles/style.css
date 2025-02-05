@@ -2,12 +2,125 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-background-image: var(--background-image);
+background-image: var(--bg-image);
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-width: 100%;
-height: 100vh;
-background-color: var(--background-color);
+background-color: var(--bg-color);
 background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  min-block-size: ;
+  block-size: 100vh;
+  padding: 10px;
+}
+
+.decorated-zone::before{
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--color-fuchsia);
+  border-inline-end: 1px solid var(--color-fuchsia);
+  /* pointer-events: none; */
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.rec {
+  position: absolute;
+  left: 310px;
+  top: 13px;
+  font-family: var(--font-primary, monospace);
+  color: var(--color-fuchsia);
+  font-size: var(--font-size-body);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-regular);
+  line-height: 25px;
+  /* text-align: center; */
+}
+
+.rec::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  block-size: 9px;
+  inline-size: 9px;
+  border-radius: 50%;
+  background-color: var(--color-fuchsia);
+  margin-inline-start: 5px;
+  box-shadow: 0px 0px 30px var(--color-fuchsia);
+}
+
+.title-decor {
+  font-family: var(--font-primary, monospace);
+  font-size: var(--font-size-body);
+  color: #000028;
+  background-color: var(--color-fuchsia);
+  font-weight: var(--font-weight-bold);
+}
+
+.article-title {
+  font-family: var(--font-primary, monospace);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-fuchsia);
+  
+}
+
+.subtitle-decor {
+  font-family: var(--font-primary, monospace);
+  font-size: var(--font-size-body);
+  color: #000028;
+  background-color: var(--color-fuchsia);
+  font-weight: var(--font-weight-regular);
+}
+
+.main_title {
+  font-family: var(--font-primary);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--color-purple);
+  text-shadow: 4px 4px 0 var(--color-fuchsia);
+}
+
+.paragraph {
+  font-family: var(--font-primary, monospace);
+  font-size: var(--font-size-body);
+  color: var(--color-pink);
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: end;
+}
+
+.header__theme-menu-button {
+  gap: 10px;
+  font-family: var(--font-primary, monospace);
+  font-size: var(--font-size-body);
+  background-color: transparent;
+  color: var(--color-fuchsia);
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--color-fuchsia);
+}
+
+.custom-link {
+  text-decoration: none;
+  text-shadow: 4px 4px 0 var(--color-fuchsia);
+
 }
