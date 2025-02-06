@@ -15,7 +15,7 @@ background-attachment: fixed;
   position: relative;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
-  min-block-size: ;
+  /* min-block-size: ; */
   block-size: 100vh;
   padding: 10px;
 }
@@ -61,7 +61,11 @@ background-attachment: fixed;
   border-radius: 50%;
   background-color: var(--color-fuchsia);
   margin-inline-start: 5px;
-  box-shadow: 0px 0px 30px var(--color-fuchsia);
+  /* box-shadow: 0px 0px 20px 5px var(--color-fuchsia); */
+}
+
+.header__title {
+  grid-row: 2;
 }
 
 .title-decor {
@@ -102,8 +106,9 @@ background-attachment: fixed;
 }
 
 .header__theme-menu {
-  display: flex;
-  justify-content: end;
+justify-self: end;
+grid-row: span ;
+align-self: center;
 }
 
 .header__theme-menu-button {
