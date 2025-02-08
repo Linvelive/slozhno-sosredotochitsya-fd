@@ -18,6 +18,10 @@ background-attachment: fixed;
   block-size: 100vh;
   min-block-size: 668px;
   padding: 10px;
+
+/* justify-content: end;
+align-items: center; */
+
 }
 
 .decorated-zone::before{
@@ -70,20 +74,17 @@ background-attachment: fixed;
 }
 
 .header__title {
-  grid-row: 2;
-  align-self: center;
   margin: 0;
   padding: 0;
   line-height: 95.7px;
 }
 
 .header__subtitle {
-  margin-top: 55px;
+align-self: center;
 }
 
 .title-decor {
   display: flex;
-  align-self: start;
   font-family: var(--font-primary, monospace);
   font-size: var(--font-size-body);
   color: #000028;
@@ -184,12 +185,27 @@ padding: 0 10px;
   gap: 20px;
 }
 
+.article_how {
+  display: grid;
+  gap: 20px;
+}
+
 .gap_between_sections {
   display: grid;
   gap: 20px;
 }
 
 .section {
+  display: grid;
+  gap: 10px;
+}
+
+.article_media {
+display: grid;
+gap: 10px;
+}
+
+.media {
   display: grid;
   gap: 10px;
 }
