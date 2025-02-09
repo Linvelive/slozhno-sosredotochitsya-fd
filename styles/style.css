@@ -18,10 +18,7 @@ background-attachment: fixed;
   block-size: 100vh;
   min-block-size: 668px;
   padding: 10px;
-
-/* justify-content: end;
-align-items: center; */
-
+  align-items: center;
 }
 
 .decorated-zone::before {
@@ -58,7 +55,6 @@ align-items: center; */
   text-transform: uppercase;
   font-weight: var(--font-weight-regular);
   line-height: 25px;
-  /* text-align: center; */
 }
 
 .rec::after {
@@ -79,12 +75,7 @@ align-items: center; */
   line-height: 95.7px;
 }
 
-.header__subtitle {
-align-self: center;
-}
-
 .title-decor {
-  display: flex;
   font-family: var(--font-primary, monospace);
   font-size: var(--font-size-body);
   color: #000028;
@@ -124,7 +115,7 @@ align-self: center;
 justify-self: end;
 grid-row: span 1;
 align-self: center;
-}
+}  
 
 .header__theme-menu-button {
   font-family: var(--font-primary, monospace);
@@ -137,6 +128,7 @@ align-self: center;
   cursor: pointer;
   transition: border 0.2s ease-in-out;
 }
+
 .header__theme-menu-button_active {
   border: 1px solid var(--color-fuchsia);
 }
@@ -172,7 +164,6 @@ padding: 0 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-
 }
 
 .article_causes {
@@ -226,16 +217,36 @@ gap: 10px;
 } 
 
 
-@media (width >= 768px) {
 
+@media (width >= 768px) {
   .header {
     min-block-size: 1024px;
     block-size: 100vh;
     padding: 20px;
   }
 
+  .header__title {
+    position: relative;
+    inset-inline-start: -20px;
+  }
+
+  .subtitle__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .header__subtitle {
-  
+      grid-column: 2/3;
+  }
+
+  .rec {
+    left: 687px;
+    top: 20px;
+  }
+
+  .rec::after {
+    top: 9px;
+    margin-inline-start: 10px;;
   }
 
   .decorated-zone::before {
@@ -261,6 +272,10 @@ gap: 10px;
     grid-template-columns: 1fr 2fr; 
   }
 
+  .title-what-width {
+    width: 30%;
+  }
+
   .article_media {
     gap: 20px;
   }
@@ -274,9 +289,9 @@ gap: 10px;
 
   .media-img {
     inline-size: 100%;
-block-size: 100%;
-object-fit: cover;
-object-position: center;
+    block-size: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .img-sunset {
