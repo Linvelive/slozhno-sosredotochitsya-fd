@@ -8,9 +8,10 @@
   --font-primary: 'IBM Plex Mono';
   --font-weight-regular: 400;
   --font-weight-bold: 700;
-  --color-fuchsia: #FF0070;
-  --color-pink: #F1B2CE;
-  --color-purple:#DB00FF;
+  --accent-color: #FF0070;
+  --titles-color: #FF0070;
+  --main-color: #F1B2CE;
+  --main-title-color:#DB00FF;
   --font-size-body: 18px;
   --font-size-title: 116px;
 }
