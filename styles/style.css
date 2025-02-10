@@ -2,12 +2,12 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-background-image: var(--bg-image);
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-color: var(--bg-color);
-background-attachment: fixed;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--bg-color);
+  background-attachment: fixed;
 }
 
 .header {
@@ -28,8 +28,8 @@ background-attachment: fixed;
   right: 10px;
   inline-size: 25px;
   block-size: 25px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--titles-color);
+  border-inline-end: 1px solid var(--titles-color);
   pointer-events: none;
 }
 
@@ -40,8 +40,8 @@ background-attachment: fixed;
   left: 10px;
   block-size: 25px;
   inline-size: 25px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--titles-color);
+  border-inline-start: 1px solid var(--titles-color);
   pointer-events: none;
 }
 
@@ -76,7 +76,7 @@ background-attachment: fixed;
 .title-decor {
   font-family: var(--font-primary, monospace);
   font-size: var(--font-size-body);
-  color: #000028;
+  color: var(--bg-color);
   background-color: var(--accent-color);
   font-weight: var(--font-weight-bold);
 }
@@ -110,16 +110,16 @@ background-attachment: fixed;
 }
 
 .header__theme-menu {
-justify-self: end;
-grid-row: span 1;
-align-self: center;
-}  
+  justify-self: end;
+  grid-row: span 1;
+  align-self: center;
+}
 
 .header__theme-menu-button {
   font-family: var(--font-primary, monospace);
   font-size: var(--font-size-body);
   background-color: transparent;
-  color: var(--accent-color);
+  color: var(--button-color);
   text-transform: lowercase;
   border: none;
   padding: 1.5px 13px;
@@ -128,26 +128,27 @@ align-self: center;
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--button-color);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
-border: 1px solid rgba(255, 0, 112, 0.4);
+  border: 1px solid rgba(255, 0, 112, 0.4);
 }
 
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
   border-block-start: none;
   border-inline-start: none;
   border-inline-end: none;
-  border-block-end: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--button-color);
 }
 
 
 .content {
-margin-block-start: 40px;
-display: grid;
-gap: 50px;
-padding: 0 10px;
+  margin-block-start: 40px;
+  display: grid;
+  gap: 50px;
+  padding: 0 10px;
 }
 
 .custom-link {
@@ -172,7 +173,7 @@ padding: 0 10px;
 }
 
 .article_causes {
-  display: grid; 
+  display: grid;
   gap: 20px;
 }
 
@@ -197,8 +198,8 @@ padding: 0 10px;
 }
 
 .article_media {
-display: grid;
-gap: 10px;
+  display: grid;
+  gap: 10px;
 }
 
 .media {
@@ -207,7 +208,7 @@ gap: 10px;
 }
 
 .media-img {
-  max-width: 100%; 
+  max-width: 100%;
   object-fit: contain;
 }
 
@@ -219,8 +220,7 @@ gap: 10px;
   block-size: 100vh;
   min-block-size: 668px;
   margin-block-start: 40px;
-} 
-
+}
 
 
 @media (width >= 768px) {
@@ -240,7 +240,7 @@ gap: 10px;
   }
 
   .header__subtitle {
-      grid-column: 2/3;
+    grid-column: 2/3;
   }
 
   .rec {
@@ -250,7 +250,7 @@ gap: 10px;
 
   .rec::after {
     top: 9px;
-    margin-inline-start: 10px;;
+    margin-inline-start: 10px;
   }
 
   .decorated-zone::before {
@@ -261,7 +261,7 @@ gap: 10px;
   .decorated-zone::after {
     left: 20px;
     bottom: 20px;
-  } 
+  }
 
   .content {
     padding: 20px;
@@ -269,11 +269,11 @@ gap: 10px;
   }
 
   .article_causes {
-    grid-template-columns: 1fr 2fr; 
+    grid-template-columns: 1fr 2fr;
   }
 
   .article_how {
-    grid-template-columns: 1fr 2fr; 
+    grid-template-columns: 1fr 2fr;
   }
 
   .title-what-width {
@@ -315,7 +315,7 @@ gap: 10px;
   .img-street {
     grid-column: span 2;
   }
-  
+
   .footer {
     min-block-size: 1024px;
   }
@@ -350,14 +350,14 @@ gap: 10px;
   }
 
   .article_causes {
-    grid-template-columns: 1fr 2fr; 
+    grid-template-columns: 1fr 2fr;
   }
 
   .section_what {
     display: flex;
     flex-direction: row;
   }
-  
+
 
   .footer {
     min-block-size: 768px;
