@@ -30,9 +30,7 @@
   display: none;
 }
 
-.theme-auto .rec {
-  display: none;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -44,6 +42,8 @@
     --main-title-color: #ffc2e6;
     --button-color: #353430;
   }
+
+  .theme-auto .rec {
+    display: none;
+  }
 }
-
-
