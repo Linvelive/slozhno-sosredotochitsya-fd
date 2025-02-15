@@ -21,6 +21,7 @@
   --button-color: #ff0070;
   --font-size-body: 18px;
   --font-size-title: 116px;
+  --button-hover-border:rgba(255, 0, 112, 0.4);
 }
 
 .theme-dark .page {
