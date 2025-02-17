@@ -133,10 +133,6 @@
   pointer-events: none;
 }
 
-.header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
-}
-
 .header__theme-menu-button:focus,
 .header__theme-menu-button:focus-visible {
   outline: none;
@@ -224,6 +220,7 @@ border-block-end: 1px solid var(--main-color);
 }
 
 /* 768px+ ------------------------------------------------ */
+
 @media (width >= 768px) {
   .header {
     min-block-size: 1024px;
@@ -241,7 +238,7 @@ border-block-end: 1px solid var(--main-color);
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .header__text{
+  .header__text {
     grid-column: 2/3;
   }
 
