@@ -38,6 +38,7 @@
     --titles-color: #353430;
     --main-title-color: #ffc2e6;
     --button-color: #353430;
+    --button-hover-border: rgb(50, 49, 45, 0.4);
   }
 
   .theme-auto .rec {
